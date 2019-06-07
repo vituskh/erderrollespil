@@ -14,7 +14,7 @@ function getRealWeekNumber() {
 function getRollespil() {
 	if (today.getDay() == 5) {
 		document.getElementById("rollespil?").textContent = "Ja, det er jo fredag."
-	} else if (today.getDay() == 4 && isDivisible(getRealWeekNumber(), 2)) {
+	} else if (today.getDay() == 4 && !isDivisible(getRealWeekNumber(), 2)) {
 		document.getElementById("rollespil?").textContent = "Ja, det er en lige torsdag."
 	} else if (today.getDay() == 2) {
 		document.getElementById("rollespil?").textContent = "Måske, har Emil tid?"
